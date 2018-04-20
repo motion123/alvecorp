@@ -1,0 +1,107 @@
+@charset "UTF-8";
+/*
+Theme Name: alvesite
+Description: アルヴェコーポレートサイト用テーマ
+Theme URI:
+Author: tomino
+Author URI:
+Version: 1.0.0
+License:
+License URI:
+*/
+.header-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.header-corp-link {
+  margin-right: auto;
+  font-size: 3em;
+  font-weight: 900;
+  padding: 16px; }
+
+.header-button {
+  outline: 0;
+  padding: 16px;
+  font-size: 1.1em;
+  width: 8em;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(100, 100, 100, 0.8);
+  transition: all 300ms 0s ease; }
+  .header-button:hover {
+    background-color: rgba(150, 150, 150, 0.5);
+    color: white; }
+
+.top-content {
+  height: 100vh;
+  background-color: #ffbb33;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.top-word {
+  color: white;
+  font-size: 2em; }
+
+.mission-container {
+  margin: auto;
+  margin-top: -50px;
+  width: 100%;
+  height: 100vh; }
+
+.mission-content {
+  padding: 0 10%; }
+
+.mission-cols {
+  padding: 50px 7.5%;
+  background-color: white; }
+
+.mission-title {
+  font-size: 8em;
+  z-index: 1;
+  color: rgba(150, 150, 150, 0.3); }
+
+.mission-word-container {
+  margin-top: -40px;
+  padding: 0 5%; }
+
+.mission-word {
+  font-size: 1.3em; }
+
+.service-container {
+  padding: 0 10%; }
+
+.service-title {
+  padding: 0 7.5%;
+  z-index: 1;
+  font-size: 8em;
+  color: rgba(150, 150, 150, 0.3); }
+
+.service-flex-container {
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.service-block {
+  z-index: -1;
+  flex-basis: 33%;
+  height: 350px;
+  border: solid 1px white; }
+  .service-block:first-child {
+    flex-basis: 99%; }
+
+.service-content {
+  background-color: grey;
+  width: 100%;
+  height: 100%; }
+
+.body {
+  margin: 0; }
+
+.myClass {
+  color: red; }
