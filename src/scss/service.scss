@@ -54,7 +54,7 @@
     height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
-    transition: transform 0.2s linear;
+    transition: all 200ms 0s ease;
   }
   &:hover::before{
     transform: scale(1.1);
@@ -67,7 +67,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    transition: transform 0.3s linear;
+    transition: all 200ms 0s ease;
   }
   &:hover::after{
     background-color: rgba(10, 10, 10, 0.7);
@@ -83,6 +83,6 @@ span.service-work{
   font-size:2em;
   position: relative;
   z-index: 4;
-  transition: transform 0.5s linear;
+  transition: all 200ms 0s ease;
 }
 

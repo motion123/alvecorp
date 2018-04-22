@@ -114,9 +114,7 @@ License URI:
     height: 100%;
     background-position: center center;
     background-repeat: no-repeat;
-    transition: -webkit-transform 0.2s linear;
-    transition: transform 0.2s linear;
-    transition: transform 0.2s linear, -webkit-transform 0.2s linear; }
+    transition: all 200ms 0s ease; }
   .service-content:hover::before {
     -webkit-transform: scale(1.1);
             transform: scale(1.1); }
@@ -128,9 +126,7 @@ License URI:
     top: 0;
     width: 100%;
     height: 100%;
-    transition: -webkit-transform 0.3s linear;
-    transition: transform 0.3s linear;
-    transition: transform 0.3s linear, -webkit-transform 0.3s linear; }
+    transition: all 200ms 0s ease; }
   .service-content:hover::after {
     background-color: rgba(10, 10, 10, 0.7); }
   .service-content:hover > span.service-work {
@@ -141,9 +137,57 @@ span.service-work {
   font-size: 2em;
   position: relative;
   z-index: 4;
-  transition: -webkit-transform 0.5s linear;
-  transition: transform 0.5s linear;
-  transition: transform 0.5s linear, -webkit-transform 0.5s linear; }
+  transition: all 200ms 0s ease; }
+
+.news-container {
+  height: 600px;
+  padding: 10% 10%; }
+
+.news-title {
+  font-size: 4em; }
+
+.news-content {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0 5%;
+  padding-top: 24px;
+  border-bottom: solid 2px #dddddd;
+  transition: all 200ms 0s ease; }
+  .news-content::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    background: rgba(200, 200, 200, 0.2);
+    transition: 0.5s; }
+  .news-content:hover::after {
+    width: 100%; }
+  .news-content::before {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background: #ffbb33;
+    transition: 0.5s; }
+  .news-content:hover::before {
+    width: 100%; }
+
+.news-header {
+  font-size: 2em;
+  margin-bottom: 24px; }
+
+.news-description {
+  margin-bottom: 24px; }
+
+.footer-container {
+  height: 400px;
+  background-color: #ffbb33; }
 
 .body {
   margin: 0; }
