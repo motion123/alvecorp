@@ -52,5 +52,5 @@ gulp.task('default', ['browser-sync'], function() {
     gulp.watch('./src/jade/**/*.jade',['jadeindex','jade']);
     gulp.watch("./index.html",        ['bs-reload']);
     gulp.watch("./style.css", ['bs-reload']);
-
+    gulp.watch("./src/js/**/*.js",['bs-reload']);
 });

@@ -9,6 +9,85 @@ Version: 1.0.0
 License:
 License URI:
 */
+@-webkit-keyframes title-cut {
+  0% {
+    left: -100%;
+    width: 100%; }
+  50% {
+    left: 0;
+    width: 100%; }
+  100% {
+    left: 100%;
+    width: -100%; } }
+@keyframes title-cut {
+  0% {
+    left: -100%;
+    width: 100%; }
+  50% {
+    left: 0;
+    width: 100%; }
+  100% {
+    left: 100%;
+    width: -100%; } }
+
+@-webkit-keyframes title-fadeIn {
+  0% {
+    color: white; }
+  90% {
+    color: white; }
+  100% {
+    color: #DFDFDF; } }
+
+@keyframes title-fadeIn {
+  0% {
+    color: white; }
+  90% {
+    color: white; }
+  100% {
+    color: #DFDFDF; } }
+
+.init-title {
+  color: white;
+  font-size: 8em; }
+
+.ts {
+  padding: 0 7.5%; }
+
+.title-animation {
+  position: relative;
+  overflow: hidden;
+  font-size: 8em;
+  z-index: 1;
+  color: #DFDFDF;
+  -webkit-animation: title-fadeIn 0.5s;
+          animation: title-fadeIn 0.5s; }
+  .title-animation::after {
+    -webkit-animation: title-cut 0.9s;
+            animation: title-cut 0.9s;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: #ffbb33;
+    content: ''; }
+  .title-animation::before {
+    -webkit-animation: title-cut 1.4s;
+            animation: title-cut 1.4s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: #DFDFDF;
+    content: ''; }
+
 .header-container {
   display: flex;
   flex-direction: row;
@@ -49,36 +128,21 @@ License URI:
 
 .mission-container {
   margin: auto;
-  margin-top: -50px;
   width: 100%;
   height: 100vh; }
-
-.mission-content {
-  padding: 0 10%; }
 
 .mission-cols {
   padding: 50px 7.5%;
   background-color: white; }
 
-.mission-title {
-  font-size: 8em;
-  z-index: 1;
-  color: rgba(150, 150, 150, 0.3); }
-
 .mission-word-container {
   margin-top: -40px;
-  padding: 0 5%; }
+  padding: 0 10%; }
 
 .mission-word {
   font-size: 1.3em; }
 
-.service-title {
-  padding: 0 7.5%;
-  font-size: 8em;
-  color: rgba(150, 150, 150, 0.3); }
-
 .service-flex-container {
-  margin-top: -40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
@@ -143,15 +207,12 @@ span.service-work {
   height: 600px;
   padding: 10% 10%; }
 
-.news-title {
-  font-size: 4em; }
-
 .news-content {
   position: relative;
   box-sizing: border-box;
   padding: 0 5%;
   padding-top: 24px;
-  border-bottom: solid 2px #dddddd;
+  border-bottom: solid 2px #eeeeee;
   transition: all 200ms 0s ease; }
   .news-content::after {
     position: absolute;
@@ -179,11 +240,16 @@ span.service-work {
     width: 100%; }
 
 .news-header {
-  font-size: 2em;
-  margin-bottom: 24px; }
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #424242; }
 
-.news-description {
-  margin-bottom: 24px; }
+.news-data {
+  font-size: 0.7em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  color: #757575; }
 
 .footer-container {
   height: 400px;

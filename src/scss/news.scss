@@ -4,16 +4,12 @@
   padding:10% 10%;
 }
 
-.news-title{
-  font-size:4em;
-}
-
 .news-content{
   position: relative;
   box-sizing: border-box;
   padding:0 5%;
   padding-top:24px;
-  border-bottom: solid 2px #dddddd;
+  border-bottom: solid 2px $disable;
   transition: all 200ms 0s ease;
   &::after{
     position: absolute;
@@ -49,10 +45,15 @@
 
 
 .news-header{
-  font-size:2em;
+  font-size:1.5em;
+  font-weight: bold;
   margin-bottom:24px;
+  color:$text;
 }
 
-.news-description{
-  margin-bottom:24px;
+.news-data{
+  font-size:0.7em;
+  margin-bottom:16px;
+  font-weight: bold;
+  color: $sec-text;
 }
