@@ -47,11 +47,15 @@ License URI:
     color: #DFDFDF; } }
 
 .init-title {
+  display: inline-block;
   color: white;
-  font-size: 8em; }
+  font-size: 8em;
+  margin: 32px 0; }
 
 .ts {
-  padding: 0 7.5%; }
+  display: inline-block;
+  padding: 0 7.5%;
+  margin: 32px 0; }
 
 .title-animation {
   position: relative;
@@ -87,6 +91,17 @@ License URI:
     height: 100%;
     background: #DFDFDF;
     content: ''; }
+
+.sente {
+  line-height: 1.6;
+  letter-spacing: 1.1px;
+  font-size: 1.1em;
+  color: #757575; }
+
+.sec-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #424242; }
 
 .header-container {
   display: flex;
@@ -126,6 +141,45 @@ License URI:
   color: white;
   font-size: 2em; }
 
+.about-container {
+  margin: 64px 0;
+  padding: 0 7.5%;
+  display: flex;
+  justify-content: space-around; }
+
+.about-col {
+  height: 350px; }
+
+.init-col {
+  opacity: 0;
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px); }
+
+.animate-about-col div.about-col:nth-child(1) {
+  transition: all 1s 0s ease;
+  opacity: 100;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px); }
+
+.animate-about-col div.about-col:nth-child(2) {
+  transition: all 1ms 0.3s ease;
+  opacity: 100;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px); }
+
+.about-header {
+  margin-bottom: 16px; }
+
+.about-content {
+  min-width: 350px;
+  max-width: 600px; }
+
+.about-img {
+  max-width: 400px;
+  min-width: 350px;
+  height: 350px;
+  background-color: #ffbb33; }
+
 .mission-container {
   margin: auto;
   width: 100%;
@@ -145,22 +199,126 @@ License URI:
 .service-flex-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  position: relative; }
 
-.service-block {
+@-webkit-keyframes fadeIn {
+  0% {
+    left: 0;
+    width: 100%; }
+  100% {
+    left: 100%;
+    width: 100%; } }
+
+@keyframes fadeIn {
+  0% {
+    left: 0;
+    width: 100%; }
+  100% {
+    left: 100%;
+    width: 100%; } }
+
+.sa div#sb {
+  position: relative;
   overflow: hidden;
   flex-basis: 50%;
   height: 350px;
   justify-content: center;
   align-items: center; }
+  .sa div#sb:first-child {
+    flex-basis: 100%; }
+  .sa div#sb:nth-child(1) .service-content::before {
+    background-image: url(./src/img/test.png); }
+  .sa div#sb:nth-child(2) .service-content::before {
+    background-image: url(./src/img/test.png); }
+  .sa div#sb:nth-child(5) .service-content::before {
+    background-image: url(./src/img/test.png); }
+  .sa div#sb:nth-child(1)::after {
+    -webkit-animation: fadeIn 0.8s;
+            animation: fadeIn 0.8s;
+    -webkit-animation-delay: 0;
+            animation-delay: 0;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    content: ''; }
+  .sa div#sb:nth-child(2)::after {
+    -webkit-animation: fadeIn 0.8s;
+            animation: fadeIn 0.8s;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    content: ''; }
+  .sa div#sb:nth-child(3)::after {
+    -webkit-animation: fadeIn 0.8s;
+            animation: fadeIn 0.8s;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    content: ''; }
+  .sa div#sb:nth-child(4)::after {
+    -webkit-animation: fadeIn 0.8s;
+            animation: fadeIn 0.8s;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    content: ''; }
+  .sa div#sb:nth-child(5)::after {
+    -webkit-animation: fadeIn 0.8s;
+            animation: fadeIn 0.8s;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    content: ''; }
+
+.service-block {
+  position: relative;
+  overflow: hidden;
+  flex-basis: 50%;
+  height: 350px;
+  justify-content: center;
+  align-items: center;
+  background-color: white; }
   .service-block:first-child {
     flex-basis: 100%; }
-  .service-block:nth-child(1) .service-content::before {
-    background-image: url(./src/img/test.png); }
-  .service-block:nth-child(2) .service-content::before {
-    background-image: url(./src/img/test.png); }
-  .service-block:nth-child(5) .service-content::before {
-    background-image: url(./src/img/test.png); }
 
 .service-content {
   width: 100%;
@@ -204,7 +362,6 @@ span.service-work {
   transition: all 200ms 0s ease; }
 
 .news-container {
-  height: 600px;
   padding: 10% 10%; }
 
 .news-content {
@@ -254,6 +411,56 @@ span.service-work {
 .footer-container {
   height: 400px;
   background-color: #ffbb33; }
+
+.other-container {
+  display: flex; }
+
+.other-content {
+  position: relative;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .other-content span {
+    font-size: 2.5em;
+    color: #757575; }
+
+span.other-word {
+  position: relative; }
+  span.other-word::after, span.other-word::before {
+    position: absolute;
+    bottom: -8px;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background: #ffbb33;
+    transition: 0.5s; }
+  span.other-word::before {
+    left: 50%; }
+  span.other-word::after {
+    right: 50%; }
+
+div.other-content:hover > span.other-word {
+  transition: all 200ms 0s ease;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px); }
+  div.other-content:hover > span.other-word::after, div.other-content:hover > span.other-word::before {
+    width: 50%; }
+
+.oa::after {
+  content: "";
+  width: 1px;
+  height: 150px;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin-bottom: auto;
+  margin-top: auto;
+  background-color: #DFDFDF; }
 
 .body {
   margin: 0; }

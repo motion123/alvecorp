@@ -1,0 +1,63 @@
+
+.other-container{
+  display: flex;
+}
+
+.other-content{
+  position: relative;
+  height:350px;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & span{
+    font-size:2.5em;
+    color:$sec-text;
+  }
+}
+
+span.other-word{
+  position:relative;
+  &::after,
+  &::before{
+    position: absolute;
+    bottom: -8px;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background: $def-deep;
+    transition: 0.5s;
+  }
+  &::before{
+    left: 50%;
+  }
+
+  &::after{
+    right: 50%;
+  }
+}
+
+div.other-content:hover > span.other-word{
+  transition: all 200ms 0s ease;
+  transform: translateY(10px);
+  &::after,
+  &::before{
+    width: 50%;
+  }
+}
+
+
+.oa::after {
+  content: "";
+  width:1px;
+  height:150px;
+  display: block;
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  margin-bottom:auto;
+  margin-top:auto;
+  background-color: $title;
+}
