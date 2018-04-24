@@ -182,19 +182,24 @@ License URI:
 
 .mission-container {
   margin: auto;
-  width: 100%;
-  height: 100vh; }
+  width: 100%; }
 
-.mission-cols {
+.word-container {
   padding: 50px 7.5%;
-  background-color: white; }
+  display: flex;
+  flex-wrap: wrap;
+  height: 350px; }
 
-.mission-word-container {
-  margin-top: -40px;
-  padding: 0 10%; }
+.mission-col {
+  font-size: 2em;
+  color: #757575; }
 
-.mission-word {
-  font-size: 1.3em; }
+#mw1 span {
+  letter-spacing: 1.1px; }
+  #mw1 span:nth-child(1) {
+    font-size: 4em; }
+  #mw1 span:nth-child(8) {
+    font-size: 2.5em; }
 
 .service-flex-container {
   display: flex;
