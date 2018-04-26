@@ -1,5 +1,40 @@
 
 .footer-container{
-  height:400px;
-  background-color: $def-deep;
+  padding:0 10%;
+}
+
+.menu-footermenu-container{
+  margin:80px 0;
+
+}
+
+
+ul#menu-footermenu {
+  margin:0;
+  padding:0;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul#menu-footermenu li{
+  display: inline-block;
+  outline:0;
+  border:none;
+  transition: all 300ms 0s ease;
+  color:$sec-text;
+  text-align: center;
+  height:100%;
+  box-sizing:border-box;
+  & a{
+    text-decoration: none;
+    border:none;
+    color:$sec-text;
+    transition:all 300ms 0s ease;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  &:hover > a{
+    color:$def-deep;
+  }
+
 }

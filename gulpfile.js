@@ -7,7 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var jade = require('gulp-jade');
 var browserSync =require('browser-sync');
-
+var rename = require('gulp-rename');
 
 gulp.task('browser-sync', function() {
     browserSync({
@@ -32,7 +32,7 @@ gulp.task('jadeindex', () => {
         .pipe(jade({
             pretty: true
         }))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./'))
 });
 
 gulp.task('jade', () => {
@@ -40,8 +40,14 @@ gulp.task('jade', () => {
         .pipe(jade({
             pretty: true
         }))
+        .pipe(gulp.dest('./html'))
+        .pipe(rename({
+            extname: '.php'
+        }))
         .pipe(gulp.dest('./html'));
 });
+
+
 
 gulp.task('bs-reload', function () {
     browserSync.reload();

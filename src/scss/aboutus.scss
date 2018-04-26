@@ -2,18 +2,18 @@
 
 .about-container{
   margin:64px 0;
-  padding:0 7.5%;
+  padding:0 7.2%;
   display:flex;
   justify-content: space-around;
 }
 
 .about-col{
-  height:350px;
+  padding:0 16px;
 }
 
 .init-col{
   opacity:0;
-  transform: translateY(30px);
+  transform: translateY(50px);
 }
 
 .animate-about-col div.about-col{

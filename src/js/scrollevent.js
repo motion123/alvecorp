@@ -9,6 +9,8 @@ var newsElement = document.getElementById("news");
 var serviceblockElement = document.getElementById("sfc");
 var abouttitleElement = document.getElementById("about");
 var aboutcolElement = document.getElementById("ac");
+var mw1Element = document.getElementById("mw1");
+var mw2Element = document.getElementById("mw2");
 
 var topWatcher = scrollMonitor.create( topElement, -100 );
 var serviceWatcher = scrollMonitor.create( serviceElement, -100 );
@@ -17,7 +19,8 @@ var newsWatcher = scrollMonitor.create( newsElement, -100 );
 var sbWatcher = scrollMonitor.create( serviceblockElement, -200);
 var abouttitleWatcher = scrollMonitor.create(abouttitleElement,-100);
 var aboutcolWatcher = scrollMonitor.create(aboutcolElement, -150);
-
+var mw1Watcher = scrollMonitor.create(mw1Element, -200);
+var mw2Watcher = scrollMonitor.create(mw2Element, 0);
 
 topWatcher.enterViewport(function() {
     console.log( '表示領域に入りました' );
@@ -60,3 +63,23 @@ aboutcolWatcher.enterViewport(function () {
     ac.classList.add("animate-about-col");
     aboutcolWatcher.destroy();
 });
+
+
+mw1Watcher.enterViewport(function () {
+    var mw1 = document.getElementById("mw1");
+    var mp1 = document.getElementById("mp1");
+    mw1.classList.remove("init-mw");
+    mw1.classList.add("mw");
+    mp1.classList.add("mission-img");
+    mw1Watcher.destroy();
+});
+
+mw2Watcher.enterViewport(function () {
+    var mw2 = document.getElementById("mw2");
+    // var mp2 = document.getElementById("mp2");
+    mw2.classList.remove("init-mw");
+    mw2.classList.add("mw");
+    // mp2.classList.add("mission-img");
+    mw2Watcher.destroy();
+});
+

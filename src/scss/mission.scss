@@ -1,5 +1,6 @@
 
 .mission-container{
+  position: relative;
   margin:auto;
   width:100%;
 }
@@ -12,33 +13,148 @@
   padding:50px 7.5%;
   display:flex;
   flex-wrap: wrap;
-  height:350px;
+  justify-content: center;
 }
 
 .mission-col {
-  font-size:2em;
+  min-height:300px;
+  font-size:1.7em;
   color: $sec-text;
+  flex-basis:50%;
+  margin:64px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
+@keyframes word-color {
+  0%{
+    color: white;
+  }
+  90%{
+    color: white;
+  }
+  100%{
+    color:$sec-text;
+  }
+}
+
+@mixin word-animate($delay,$pat){
+  animation: word-color 0.5s ease-out $delay forwards;
+  &::after{
+    @include title-cut-a(0.9s,$delay + 0.2,$def-deep,$pat);
+  }
+  &::before{
+    @include title-cut-a(1.4s,$delay,$title,$pat);
+  }
+}
+
+.init-mw,
+.mw{
+  width:100%;
+}
+
+.init-mw span{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin:1.1px;
+  color:white;
+}
+
+.mw span{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin:1.1px;
+  color:white;
+  @for $i from 1 through 37 {
+    &:nth-child(#{$i}) {
+       @if $i % 4 == 0 {
+          @include word-animate(0.03s * $i,"r-l");
+       }@else if $i % 4 == 1 {
+         @include word-animate(0.03s * $i,"t-b");
+       }@else if $i % 4 == 2 {
+         @include word-animate(0.03s * $i,"l-r");
+       }@else if $i % 4 == 3 {
+         @include word-animate(0.03s * $i,"b-t");
+       }
+    }
+  }
+  //&:nth-child(1){
+  //  font-size:1.7em;
+  //}
+  //@for $y from 9 through 15{
+  //  &:nth-child(#{$y}){
+  //    font-size:1.7em;
+  //  }
+  //}
+  //&:nth-child(23){
+  //  font-size:1.7em;
+  //}
+  //&:nth-child(24){
+  //  font-size:1.7em;
+  //}
+}
+
+@keyframes fadeInc {
+  0%{
+    transform: translateY(50px);
+    opacity:0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity:100;
+  }
 }
 
 
-#mw1 span{
-  letter-spacing: 1.1px;
-  &:nth-child(1){
-    font-size:4em;
-  }
-  &:nth-child(8) {
-    font-size:2.5em;
-  }
-  &:nth-child(1) {
 
-  }
-  &:nth-child(1) {
+.mission-img{
+  background-image: url(./src/img/internet-icon.png);
+  opacity:0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: fadeInc 1s ease-out 0s forwards;
+}
 
-  }
-  &:nth-child(1) {
 
-  }
-  &:nth-child(1) {
 
+.mwtest span{
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  margin:1.1px;
+  color:white;
+  @for $i from 1 through 37 {
+    &:nth-child(#{$i}) {
+      @if $i % 4 == 0 {
+        @include word-animate(0.03s * $i,"r-l");
+      }@else if $i % 4 == 1 {
+        @include word-animate(0.03s * $i,"t-b");
+      }@else if $i % 4 == 2 {
+        @include word-animate(0.03s * $i,"l-r");
+      }@else if $i % 4 == 3 {
+        @include word-animate(0.03s * $i,"b-t");
+      }
+    }
   }
+  //&:nth-child(1){
+  //  font-size:1.7em;
+  //}
+  //@for $y from 9 through 15{
+  //  &:nth-child(#{$y}){
+  //    font-size:1.7em;
+  //  }
+  //}
+  //&:nth-child(23){
+  //  font-size:1.7em;
+  //}
+  //&:nth-child(24){
+  //  font-size:1.7em;
+  //}
 }

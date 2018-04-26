@@ -1,3 +1,4 @@
+// 左から右
 @keyframes title-cut {
   0% {
     left:-100%;
@@ -13,6 +14,60 @@
   }
 }
 
+//右から左
+@keyframes title-cut-r-l {
+  0% {
+    left:100%;
+    width:100%;
+  }
+  50% {
+    left:0;
+    width:100%;
+  }
+  100% {
+    left:-100%;
+    width:-100%;
+  }
+}
+
+//上から下
+@keyframes title-cut-b-t {
+  0% {
+    top:100%;
+    left:0;
+    width:100%;
+  }
+  50% {
+    top:0;
+    left:0;
+    width:100%;
+  }
+  100% {
+    top:-100%;
+    left:0;
+    width:-100%;
+  }
+}
+
+//下から上
+@keyframes title-cut-t-b {
+  0% {
+    top:-100%;
+    left:0;
+    width:100%;
+  }
+  50% {
+    top:0;
+    left:0;
+    width:100%;
+  }
+  100% {
+    top:100%;
+    left:0;
+    width:-100%;
+  }
+}
+
 @keyframes title-fadeIn{
   0%{
     color: white;
@@ -24,6 +79,7 @@
     color:$title;
   }
 }
+
 .init-title {
     display: inline-block;
     color:white;
@@ -37,8 +93,16 @@
   margin:32px 0;
 }
 
-@mixin title-cut-a($at,$dt,$color){
-  animation: title-cut $at;
+@mixin title-cut-a($at,$dt,$color,$cutp){
+  @if $cutp == "l-r" {
+    animation: title-cut $at;
+  } @else if $cutp == "r-l" {
+    animation: title-cut-r-l $at;
+  } @else if $cutp == "t-b" {
+    animation: title-cut-t-b $at;
+  } @else if $cutp == "b-t" {
+    animation: title-cut-b-t $at;
+  }
   animation-delay: $dt;
   position: absolute;
   display: inline-block;
@@ -55,12 +119,11 @@
   overflow: hidden;
   font-size:8em;
   z-index:1;
-  color:$title;
-  animation: title-fadeIn 0.5s;
+  animation: title-fadeIn 0.5s linear 0s forwards;
   &::after{
-    @include title-cut-a(0.9s,0.2s,$def-deep);
+    @include title-cut-a(0.9s,0.2s,$def-deep,"l-r");
   }
   &::before{
-    @include title-cut-a(1.4s,0s,$title);
+    @include title-cut-a(1.4s,0s,$title,"l-r");
   }
 }

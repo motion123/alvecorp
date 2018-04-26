@@ -8,5 +8,17 @@
 .sec-header{
   font-size: 1.2em;
   font-weight: bold;
-  color:$text
+  color:$text;
+  margin: 32px 0;
+  position: relative;
+  &::after{
+    content:"";
+    position: absolute;
+    top:-16px;
+    left:0;
+    width:25px;
+    height:5px;
+    background-color: $def-deep;
+
+  }
 }
