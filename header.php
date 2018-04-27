@@ -8,6 +8,9 @@
 </head>
 <body class="body">
 <nav class="header-container">
-    <a class="header-title" href="<?php echo home_url('/'); ?>"><img class="header-img" src="http://localhost/wp-content/uploads/2018/04/logo.gif"/></a>
+    <a class="header-title" href="<?php echo home_url('/'); ?>"><img class="header-img" src="http://localhost:8888/wordpress/wp-content/uploads/2018/04/logo_03.png"/></a>
     <?php wp_nav_menu( array ( 'theme_location' => 'header-navi' ) ); ?>
+    <div id="menu-icon" class="header-icon">
+        <div class="h-icon"></div>
+    </div>
 </nav>

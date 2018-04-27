@@ -1,7 +1,7 @@
 
 
 .service-container{
-  margin-bottom:80px;
+  @include cm();
 }
 
 
@@ -10,7 +10,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
   position: relative;
-  padding: 0 7.2%;
+  @include mq(md) {
+    padding: 0 7.2%;
+  }
 }
 
 .service-block{
@@ -88,9 +90,12 @@
 }
 
 .service-link{
-  font-size:1.5em;
+  font-size:1em;
+  @include mq(md){
+    font-size:1.4em;
+  }
   font-weight:bold;
-  color:black;
+  color:$text;
   padding:0 7.5%;
   float:right;
 }

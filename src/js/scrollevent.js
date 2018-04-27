@@ -24,6 +24,11 @@ var mw2Watcher = scrollMonitor.create(mw2Element, 0);
 
 topWatcher.enterViewport(function() {
     console.log( '表示領域に入りました' );
+    document.getElementById("menu-icon").onclick = function() {
+        console.log("moi");
+        var menu = document.getElementById("menu-headermenu")
+        menu.classList.toggle("fheader");
+    }
 });
 missionWatcher.enterViewport(function() {
     var mt = document.getElementById("mt");
@@ -82,4 +87,3 @@ mw2Watcher.enterViewport(function () {
     // mp2.classList.add("mission-img");
     mw2Watcher.destroy();
 });
-

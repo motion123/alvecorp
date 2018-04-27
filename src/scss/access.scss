@@ -1,0 +1,22 @@
+
+.access-container{
+  @include cm();
+  @include centering();
+  flex-wrap: wrap;
+}
+
+.access-map-box{
+  & iframe{
+  min-width:350px;
+  max-width:600px;
+  height:auto;
+  border:none;
+  }
+}
+
+.a-header{
+  display: inline-block;
+  width:4em;
+  color: $text;
+  font-weight: bold;
+}

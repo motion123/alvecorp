@@ -1,7 +1,10 @@
 
 .news-container{
-  margin:48px 0;
-  padding:0 7.5%;
+  @include cm();
+  padding:0;
+  @include mq(md) {
+    padding: 0 7.5%;
+  }
 }
 
 .news-content{
@@ -46,7 +49,6 @@
 
 .news-header{
   font-size:1.5em;
-  font-weight: bold;
   margin-bottom:24px;
   color:$text;
 }

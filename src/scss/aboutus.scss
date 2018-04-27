@@ -1,7 +1,7 @@
 
 
 .about-container{
-  margin:64px 0;
+  @include cm();
   padding:0 7.2%;
   display:flex;
   justify-content: space-around;
@@ -11,7 +11,7 @@
   padding:0 16px;
 }
 
-.init-col{
+.init-col div{
   opacity:0;
   transform: translateY(50px);
 }
@@ -23,7 +23,7 @@
     transform: translateY(0px);
   }
   &:nth-child(2){
-    transition: all 1ms 0.3s ease;
+    transition: all 1s 0s ease;
     opacity:100;
     transform: translateY(0px);
   }
@@ -41,7 +41,18 @@
 .about-img{
   max-width:400px;
   min-width:350px;
-  // test
-  height:350px;
-  background-color: $def-deep;
+  height:290px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image{
+}
+
+.dn{
+  display: none;
+  @include mq(md){
+    display:block;
+  }
 }

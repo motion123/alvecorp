@@ -1,10 +1,10 @@
 @import "wp.scss";
 
-
+//const
 @import "color.scss";
-@import "animation.scss";
 @import "const.scss";
-
+@import "animation.scss";
+// main
 @import "header.scss";
 @import "top.scss";
 @import "aboutus.scss";
@@ -13,6 +13,10 @@
 @import "news.scss";
 @import "footer.scss";
 @import "otherinfo.scss";
+//kobetu
+@import "result.scss";
+@import "access.scss";
+@import "form.scss";
 
 .body{
   margin:0;
@@ -20,4 +24,3 @@
 .myClass{
   color:red;
 }
-

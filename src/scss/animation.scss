@@ -83,8 +83,11 @@
 .init-title {
     display: inline-block;
     color:white;
-    font-size:8em;
+    font-size:3em;
     margin: 32px 0;
+    @include mq(md){
+      font-size:8em;
+    }
 }
 
 .ts{
@@ -117,7 +120,10 @@
 .title-animation {
   position: relative;
   overflow: hidden;
-  font-size:8em;
+  font-size:3em;
+  @include mq(md){
+    font-size:8em;
+  }
   z-index:1;
   animation: title-fadeIn 0.5s linear 0s forwards;
   &::after{

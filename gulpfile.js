@@ -47,6 +47,13 @@ gulp.task('jade', () => {
         .pipe(gulp.dest('./html'));
 });
 
+gulp.task('jade2', () => {
+  return gulp.src('./src/jade2/**/*.jade')
+            .pipe(jade({
+              pretty:true
+            }))
+            .pipe(gulp.dest('./html2'));
+})
 
 
 gulp.task('bs-reload', function () {
@@ -59,4 +66,5 @@ gulp.task('default', ['browser-sync'], function() {
     gulp.watch("./index.html",        ['bs-reload']);
     gulp.watch("./style.css", ['bs-reload']);
     gulp.watch("./src/js/**/*.js",['bs-reload']);
+    gulp.watch("./src/jade2/**/*.jade",['jade2']);
 });

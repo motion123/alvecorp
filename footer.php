@@ -1,4 +1,3 @@
-
 <!--
 Created by tomino on 18/04/22.
 
@@ -7,7 +6,7 @@ Created by tomino on 18/04/22.
   <nav class="footer-container">
       <div class="footer-company-info">
           <div class="logo">
-              <img src="http://localhost/wp-content/uploads/2018/04/logo.gif"/>
+              <img class="footer-img" src="http://localhost:8888/wordpress/wp-content/uploads/2018/04/logo_03.png"/>
           </div>
       </div>
        <?php wp_nav_menu( array ( 'theme_location' => 'footer-navi' ) );?>

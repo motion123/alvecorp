@@ -28,23 +28,40 @@
 }
 
 .header-img{
-  padding:6px 16px;
+  padding-left:16px;
+  height:70px;
 }
 
 ul#menu-headermenu {
   height:70px;
   margin:0;
+  list-style-type: none;
+  position:fixed;
+  top:-240px;
+  right:0;
+  transition: 300ms ease 0s;
+  @include mq(md){
+    position: relative;
+    top:0;
+    right:0;
+  }
 }
 
 ul#menu-headermenu li{
-  display: inline-block;
+  @include mq(md) {
+    display: inline-block;
+  }
   outline:0;
   padding:16px 32px;
+  min-width:11em;
+  @include mq(md){
+    min-width:6em;
+  }
   font-size:1.1em;
-  min-width:6em;
   border:none;
   transition: all 300ms 0s ease;
   color:black;
+  background-color:white;
   text-align: center;
   height:100%;
   box-sizing:border-box;
@@ -66,3 +83,47 @@ ul#menu-headermenu li{
 
 }
 
+.fheader{
+  transition: 300ms ease 0s;
+  z-index:30;
+  top:70px !important;
+}
+
+.header-icon{
+  z-index:29;
+  display: block;
+  padding:20px;
+  width:70px;
+  height:70px;
+  position:fixed;
+  top:0;
+  right:0;
+  box-sizing: border-box;
+  cursor: pointer;
+  @include mq(md){
+    display: none;
+  }
+}
+.h-icon{
+  position:relative;
+  top:0;
+  height:4px;
+  width:30px;
+  background-color: black;
+  &::after{
+    position: absolute;
+    top: 13px;
+    background: black;
+    content: "";
+    width: 100%;
+    height: 4px;
+  }
+  &::before{
+    position: absolute;
+    top: 26px;
+    background: black;
+    content: "";
+    width: 100%;
+    height: 4px;
+  }
+}

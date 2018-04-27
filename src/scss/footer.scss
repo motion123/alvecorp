@@ -1,6 +1,7 @@
 
 .footer-container{
   padding:0 10%;
+  margin-top:65px;
 }
 
 .menu-footermenu-container{
@@ -36,5 +37,10 @@ ul#menu-footermenu li{
   &:hover > a{
     color:$def-deep;
   }
+
+}
+
+.footer-img{
+  height:70px;
 
 }
