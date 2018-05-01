@@ -12,6 +12,9 @@ var aboutcolElement = document.getElementById("ac");
 var mw1Element = document.getElementById("mw1");
 var mw2Element = document.getElementById("mw2");
 
+var hdElement = document.getElementById('hd');
+var hdWatcher = scrollMonitor.create( hdElement,10 );
+
 var topWatcher = scrollMonitor.create( topElement, -100 );
 var serviceWatcher = scrollMonitor.create( serviceElement, -100 );
 var missionWatcher = scrollMonitor.create( missionElement, -100 );
@@ -22,18 +25,36 @@ var aboutcolWatcher = scrollMonitor.create(aboutcolElement, -150);
 var mw1Watcher = scrollMonitor.create(mw1Element, -200);
 var mw2Watcher = scrollMonitor.create(mw2Element, 0);
 
+
+
 topWatcher.enterViewport(function() {
-    console.log( '表示領域に入りました' );
     document.getElementById("menu-icon").onclick = function() {
         console.log("moi");
         var menu = document.getElementById("menu-headermenu")
         menu.classList.toggle("fheader");
     }
 });
+
+hdWatcher.enterViewport(function(){
+  console.log("asdf");
+  var hc = document.getElementById("hc");
+  hc.classList.remove("hc-bw");
+  hc.classList.add("hc-bn");
+});
+
+hdWatcher.exitViewport(function(){
+  console.log("asdf");
+    var hc = document.getElementById("hc");
+    hc.classList.remove("hc-bn");
+    hc.classList.add("hc-bw");
+});
+
 missionWatcher.enterViewport(function() {
     var mt = document.getElementById("mt");
     mt.classList.remove("init-title");
     mt.classList.add("title-animation");
+
+    var hc = document.getElementById("hc");
     missionWatcher.destroy();
 });
 serviceWatcher.enterViewport(function() {

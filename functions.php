@@ -45,4 +45,22 @@ function create_post_type() {
 
 }
 
+
+add_filter( 'register_post_type_args', function( $args, $post_type ) {
+    global $wp_rewrite;
+    if ( 'post' === $post_type ) {
+        $archive_slug = 'blog';
+        // Setting 'has_archive' ensures get_post_type_archive_template() returns an archive.php template.
+        $args['has_archive'] = $archive_slug;
+        // We have to register rewrite rules, because WordPress won't do it for us unless $args['rewrite'] is true.
+        $archive_slug = $wp_rewrite->root . $archive_slug;
+        add_rewrite_rule( "{$archive_slug}/?$", "index.php?post_type=$post_type", 'top' );
+        $feeds = '(' . trim( implode( '|', $wp_rewrite->feeds ) ) . ')';
+        add_rewrite_rule( "{$archive_slug}/feed/$feeds/?$", "index.php?post_type=$post_type" . '&feed=$matches[1]', 'top' );
+        add_rewrite_rule( "{$archive_slug}/$feeds/?$", "index.php?post_type=$post_type" . '&feed=$matches[1]', 'top' );
+        add_rewrite_rule( "{$archive_slug}/{$wp_rewrite->pagination_base}/([0-9]{1,})/?$", "index.php?post_type=$post_type" . '&paged=$matches[1]', 'top' );
+    }
+    return $args;
+}, 10, 2 );
+
 ?>

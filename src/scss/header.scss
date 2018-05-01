@@ -9,7 +9,16 @@
   width:100%;
   height:70px;
   z-index: 100;
-  background-color: white;
+}
+
+.hc-bn{
+  background: none;
+  transition: 300ms ease 0s;
+}
+
+.hc-bw{
+  background-color:white;
+  transition: 300ms ease 0s;
 }
 
 .header-corp-link{
@@ -50,13 +59,12 @@ ul#menu-headermenu {
 ul#menu-headermenu li{
   @include mq(md) {
     display: inline-block;
+    min-width:6em;
+    background:none ;
   }
   outline:0;
   padding:16px 32px;
   min-width:11em;
-  @include mq(md){
-    min-width:6em;
-  }
   font-size:1.1em;
   border:none;
   transition: all 300ms 0s ease;
@@ -127,4 +135,13 @@ ul#menu-headermenu li{
     width: 100%;
     height: 4px;
   }
+}
+
+
+.header-hidden{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100px;
+  width:100px;
 }

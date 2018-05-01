@@ -2,7 +2,9 @@
   <?php get_header();?>
   <section id="top">
     <div class="top-content">
-      <div class="top-word">もっと効果的なWEBサイトとシステムを。</div>
+      <div class="top-img">
+          <h1 class="top-title">もっと効果的なWEBサイトとシステムを。</h1>
+      </div>
     </div>
   </section>
   <!--
@@ -126,7 +128,7 @@
                   <div class="service-list"></div>
               </div>
           </div>
-          <div><a class="service-link">もっと見る</a></div>
+          <div><a class="service-link" href="<?php echo home_url('/制作実績')?>">もっと見る</a></div>
       </div>
   </section>
   <!--Created by tomino on 18/04/22.
