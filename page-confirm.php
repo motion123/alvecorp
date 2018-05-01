@@ -16,8 +16,8 @@ if(isset($_POST['your_submit'])) {
 }
 ?>
 <?php get_header();?>
-
-<table rules="all" border="border">
+<div class="confirm-container">
+<table class="confirm-table" rules="all" border="border">
     <tr>
         <th>お名前</th><td><p><?php echo htmlspecialchars($_SESSION['your_name']); ?></p></td>
     </tr>
@@ -37,7 +37,8 @@ if(isset($_POST['your_submit'])) {
     </tr>
 </table>
 <center><span>
-    <button class="submit" type="button" onclick="location.href='http://localhost:8888/wordpress/contact-us-2/'">修正</button>
-    <button class="submit" type="button" onclick="location.href='http://localhost:8888/wordpress/complate/'">送信</button>
+    <button class="submit" type="button" onclick="location.href='<?php echo home_url('/contact-us-2'); ?>'">修正</button>
+    <button class="submit" type="button" onclick="location.href='<?php echo home_url('/complete'); ?>'">送信</button>
 </span></center>
+</div>>
 <?php get_footer(); ?>

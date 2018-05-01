@@ -6,7 +6,7 @@ session_start();
 
 <section>
   <div class="contact-container">
-    <form class="contact-form" action="http://localhost:8888/wordpress/confirm/" method="post">
+    <form class="contact-form" action="<?php echo home_url('/confirm'); ?>" method="post">
       <div class="contact-content">
         <h4 class="contact-header">お名前</h4>
         <div class="contact-input-box">

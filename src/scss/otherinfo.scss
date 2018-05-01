@@ -1,6 +1,12 @@
 
+
 .other-container{
   display: flex;
+  & a{
+    text-decoration: none;
+    display: flex;
+    width:50%;
+  }
 }
 
 .other-content{

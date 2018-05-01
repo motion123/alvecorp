@@ -30,7 +30,6 @@
   width: 100%;
   display: inline-block;
 position: relative;
-overflow: hidden;
   &::after{
     content:"";
     position: absolute;
@@ -53,16 +52,55 @@ overflow: hidden;
 .contact-textarea{
   height:300px;
   width:100%;
+  font-size:1.3em;
+  padding:16px;
 }
 
 .contact-submit{
   & input{
 
-          font-size: 1.5em;
+    font-size: 1.5em;
         border: none;
         height: 40px;
         width: 100%;
         color: white;
   background-color: $def-deep;
 }
+}
+
+.confirm-container{
+  margin:80px 0;
+  padding:0 7.5%;
+}
+
+.confirm-table{
+  width:100%;
+
+}
+
+.submit{
+  width:150px;
+  color: white;
+  background-color: $def-deep;
+  border:none;
+  font-size:1.2em;
+  margin:16px;
+  padding:16px;
+}
+
+.complete-container{
+  padding:0 7.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:50vh;
+}
+
+
+.complete-content{
+  & a{
+    text-decoration: none;
+    font-size: 3em;
+    color:$text;
+  }
 }

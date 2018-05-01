@@ -2751,7 +2751,7 @@ ul#menu-headermenu li {
     content: "";
     height: 100%;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), white); }
+    background: linear-gradient(to bottom, transparent, white); }
 
 .ws-list li {
   color: #757575;
@@ -2777,6 +2777,8 @@ ul#menu-headermenu li {
   @media screen and (min-width: 768px) {
     .news-container {
       padding: 0 7.5%; } }
+  .news-container a {
+    text-decoration: none; }
 
 .news-content {
   position: relative;
@@ -2858,6 +2860,10 @@ ul#menu-footermenu li {
 
 .other-container {
   display: flex; }
+  .other-container a {
+    text-decoration: none;
+    display: flex;
+    width: 50%; }
 
 .other-content {
   position: relative;
@@ -2997,8 +3003,7 @@ body {
 .contact-input-box {
   width: 100%;
   display: inline-block;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   .contact-input-box::after {
     content: "";
     position: absolute;
@@ -3017,7 +3022,9 @@ body {
 
 .contact-textarea {
   height: 300px;
-  width: 100%; }
+  width: 100%;
+  font-size: 1.3em;
+  padding: 16px; }
 
 .contact-submit input {
   font-size: 1.5em;
@@ -3027,8 +3034,54 @@ body {
   color: white;
   background-color: #ffbb33; }
 
+.confirm-container {
+  margin: 80px 0;
+  padding: 0 7.5%; }
+
+.confirm-table {
+  width: 100%; }
+
+.submit {
+  width: 150px;
+  color: white;
+  background-color: #ffbb33;
+  border: none;
+  font-size: 1.2em;
+  margin: 16px;
+  padding: 16px; }
+
+.complete-container {
+  padding: 0 7.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; }
+
+.complete-content a {
+  text-decoration: none;
+  font-size: 3em;
+  color: #424242; }
+
+.news {
+  margin: 80px 0;
+  padding: 0 7.5%; }
+  .news h2 a {
+    text-decoration: none;
+    color: #424242; }
+  .news p {
+    color: #757575;
+    font-size: 1.1em; }
+    .news p img {
+      height: auto;
+      width: 100%; }
+
+.post-meta span {
+  font-size: 0.8em;
+  color: #BDBDBD; }
+
 .body {
-  margin: 0; }
+  margin: 0;
+  margin-top: 70px !important; }
 
 .myClass {
   color: red; }

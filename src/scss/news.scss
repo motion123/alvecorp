@@ -5,6 +5,9 @@
   @include mq(md) {
     padding: 0 7.5%;
   }
+  & a{
+    text-decoration: none;
+  }
 }
 
 .news-content{
@@ -59,3 +62,4 @@
   font-weight: bold;
   color: $sec-text;
 }
+

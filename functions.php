@@ -21,4 +21,28 @@ function add_scripts() {
     wp_enqueue_script('scrollEvent', '', array("scrollMonitor"), false, true);
 }
 add_action( 'wp_print_scripts', 'add_scripts' );
+
+// カスタム投稿タイプの追加
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+    $exampleSupports = [
+        'title',
+        'editor',
+        'revisions'
+    ];
+
+    // add post type
+    register_post_type( 'news',
+        array(
+            'label' => '新着情報',
+            'public' => true,
+            'has_archive' => true,
+            'menu_position' => 5,
+            'supports' => $exampleSupports
+        )
+    );
+
+}
+
 ?>

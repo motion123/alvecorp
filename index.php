@@ -134,30 +134,37 @@
   <section id="news">
     <div id="nt" class="init-title"><span class="ts">NEWS</span></div>
     <div class="news-container">
-      <div class="news-content">
-        <div class="news-data">2018.04.22</div>
-        <div class="news-header">test</div>
-      </div>
-      <div class="news-content">
-        <div class="news-data">2018.04.22</div>
-        <div class="news-header">testdiv.news-content</div>
-      </div>
-      <div class="news-content">
-        <div class="news-data">2018.04.22</div>
-        <div class="news-header">test</div>
-      </div>
-      <div class="news-content">
-        <div class="news-data">2018.04.22</div>
-        <div class="news-header">test    div.news-description testtesttesttest</div>
-      </div>
+        <?php $args = array(
+            'numberposts' => 5,                //表示（取得）する記事の数
+            'post_type' => 'news'    //投稿タイプの指定
+        );
+        $posts = get_posts( $args );
+        if( $posts ) : foreach( $posts as $post ) : setup_postdata( $post ); ?>
+            <a href="<?php the_permalink(); ?>">
+                <div class="news-content">
+                    <div class="news-data"><?php the_time("Y.m.d"); ?></div>
+                    <div class="news-header"><?php the_title(); ?></div>
+                </div>
+            </a>
+        <?php endforeach; ?>
+        <?php else : //記事が無い場合 ?>
+            <li><p>記事はまだありません。</p></li>
+        <?php endif;
+        wp_reset_postdata(); //クエリのリセット ?>
     </div>
   </section>
+
+
   <!--Created by tomino on 18/04/24.
-  -->
+-->
   <section>
-    <div class="other-container">
-      <div class="other-content oa"><span class="other-word">Contact Us</span></div>
-      <div class="other-content"><span class="other-word">Staff Blog</span></div>
-    </div>
+      <div class="other-container">
+          <a href="<?php echo home_url('/contact-us-2'); ?>">
+              <div class="other-content oa"><span class="other-word">Contact Us</span></div>
+          </a>
+          <a href="">
+              <div class="other-content"><span class="other-word">Staff Blog</span></div>
+          </a>
+      </div>
   </section>
 <?php get_footer(); ?>
