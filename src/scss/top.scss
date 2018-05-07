@@ -90,6 +90,7 @@
 .top-title{
   color:white;
   font-size:1.6em;
+  margin:16px;
   @include mq(sm){
     font-size:2em;
   }
@@ -101,5 +102,9 @@
   }
   @include mq(xl){
     font-size:4em;
+  }
+  & span{
+    text-align: center;
+    display: inline-block;
   }
 }

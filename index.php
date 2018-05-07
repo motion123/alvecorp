@@ -3,7 +3,11 @@
   <section id="top">
     <div class="top-content">
       <div class="top-img">
-          <h1 class="top-title">もっと効果的なWEBサイトとシステムを。</h1>
+          <h1 class="top-title">
+              <span>もっと効果的な</span>
+              <span>WEBサイトと</span>
+              <span>システムを。</span>
+          </h1>
       </div>
     </div>
   </section>
@@ -27,10 +31,12 @@
       </div>
     </div>
   </section>
+
   <!--
   Created by tomino on 18/04/19.
 
   -->
+
   <section id="mission" class="mission-container">
     <div class="mission-content">
       <div id="mt" class="init-title"><span class="ts">MISSION</span></div>
@@ -128,14 +134,15 @@
                   <div class="service-list"></div>
               </div>
           </div>
-          <div><a class="service-link" href="<?php echo home_url('/制作実績')?>">もっと見る</a></div>
+          <div class="service-more">
+            <a class="service-link" href="<?php echo home_url('/products')?>">もっと見る</a></div>
       </div>
   </section>
   <!--Created by tomino on 18/04/22.
   -->
   <section id="news">
     <div id="nt" class="init-title"><span class="ts">NEWS</span></div>
-    <div class="news-container">
+    <div id="nc" class="news-container nfc">
         <?php $args = array(
             'numberposts' => 5,                //表示（取得）する記事の数
             'post_type' => 'news'    //投稿タイプの指定
@@ -161,10 +168,10 @@
 -->
   <section>
       <div class="other-container">
-          <a href="<?php echo home_url('/contact-us-2'); ?>">
+          <a href="<?php echo home_url('/contact-us/'); ?>">
               <div class="other-content oa"><span class="other-word">Contact Us</span></div>
           </a>
-          <a href="">
+          <a href="<?php echo home_url('/blog/');?>">
               <div class="other-content"><span class="other-word">Staff Blog</span></div>
           </a>
       </div>

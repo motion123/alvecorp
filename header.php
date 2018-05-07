@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" media="screen">
     <title><?php  wp_title( '|', true, 'right' ); bloginfo('name'); ?></title>

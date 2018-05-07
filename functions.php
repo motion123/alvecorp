@@ -13,12 +13,16 @@ register_nav_menu( 'footer-navi', 'フッターのナビゲーション' );
 function register_script(){ //読み込むJSを登録する
 wp_register_script('scrollEvent', get_template_directory_uri().'/src/js/scrollevent.js');
 wp_register_script('scrollMonitor', get_template_directory_uri().'/src/js/scrollMonitor.js');
+wp_register_script('headerMenu', get_template_directory_uri().'/src/js/header-menu.js');
 }
 
 function add_scripts() {
     register_script();
     wp_enqueue_script('scrollMonitor', '', array(), false, true);
+    wp_enqueue_script('headerMenu', '', array('scrollMonitor'), false, true);
+    if(is_home()){
     wp_enqueue_script('scrollEvent', '', array("scrollMonitor"), false, true);
+    }
 }
 add_action( 'wp_print_scripts', 'add_scripts' );
 

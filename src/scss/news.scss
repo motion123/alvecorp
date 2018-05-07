@@ -10,6 +10,18 @@
   }
 }
 
+.nfc{
+  opacity:0;
+  transform: translateY(50px);
+}
+
+.na{
+  opacity: 100;
+  transform: translateY(0px);
+  transition: all 1s 0s ease;
+
+}
+
 .news-content{
   position: relative;
   box-sizing: border-box;
@@ -62,4 +74,3 @@
   font-weight: bold;
   color: $sec-text;
 }
-

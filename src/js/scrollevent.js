@@ -6,48 +6,24 @@ var topElement = document.getElementById("top");
 var serviceElement = document.getElementById("service");
 var missionElement = document.getElementById("mission");
 var newsElement = document.getElementById("news");
+var ncElement = document.getElementById("nc");
 var serviceblockElement = document.getElementById("sfc");
 var abouttitleElement = document.getElementById("about");
 var aboutcolElement = document.getElementById("ac");
 var mw1Element = document.getElementById("mw1");
 var mw2Element = document.getElementById("mw2");
 
-var hdElement = document.getElementById('hd');
-var hdWatcher = scrollMonitor.create( hdElement,10 );
-
 var topWatcher = scrollMonitor.create( topElement, -100 );
 var serviceWatcher = scrollMonitor.create( serviceElement, -100 );
 var missionWatcher = scrollMonitor.create( missionElement, -100 );
 var newsWatcher = scrollMonitor.create( newsElement, -100 );
+var ncWatcher = scrollMonitor.create( ncElement, -100);
 var sbWatcher = scrollMonitor.create( serviceblockElement, -200);
 var abouttitleWatcher = scrollMonitor.create(abouttitleElement,-100);
 var aboutcolWatcher = scrollMonitor.create(aboutcolElement, -150);
 var mw1Watcher = scrollMonitor.create(mw1Element, -200);
 var mw2Watcher = scrollMonitor.create(mw2Element, 0);
 
-
-
-topWatcher.enterViewport(function() {
-    document.getElementById("menu-icon").onclick = function() {
-        console.log("moi");
-        var menu = document.getElementById("menu-headermenu")
-        menu.classList.toggle("fheader");
-    }
-});
-
-hdWatcher.enterViewport(function(){
-  console.log("asdf");
-  var hc = document.getElementById("hc");
-  hc.classList.remove("hc-bw");
-  hc.classList.add("hc-bn");
-});
-
-hdWatcher.exitViewport(function(){
-  console.log("asdf");
-    var hc = document.getElementById("hc");
-    hc.classList.remove("hc-bn");
-    hc.classList.add("hc-bw");
-});
 
 missionWatcher.enterViewport(function() {
     var mt = document.getElementById("mt");
@@ -69,6 +45,12 @@ newsWatcher.enterViewport(function() {
     nt.classList.add("title-animation");
     newsWatcher.destroy();
 });
+
+ncWatcher.enterViewport(function() {
+  var nc = document.getElementById("nc");
+  nc.classList.remove("nfc");
+  nc.classList.add("na");
+})
 
 sbWatcher.enterViewport(function () {
     console.log("はいったよ");

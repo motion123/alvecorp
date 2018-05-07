@@ -1,4 +1,5 @@
 
+
 .access-container{
   @include cm();
   @include centering();
@@ -6,11 +7,29 @@
 }
 
 .access-map-box{
+  padding:0 8px;
+  width: 100%;
+  @include mq(md){
+    padding:0;
+    width:85%;
+  }
+  position: relative;
+  padding-bottom: 40% !important;
+  height: 0;
+  overflow: hidden;
   & iframe{
-  min-width:350px;
-  max-width:600px;
-  height:auto;
-  border:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.access-info{
+  padding:0 8px;
+  @include mq(md){
+    padding: 0 7.5%;
   }
 }
 
