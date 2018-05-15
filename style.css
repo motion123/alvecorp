@@ -3365,6 +3365,28 @@ body {
   font-size: 0.8em;
   color: #BDBDBD; }
 
+.pri-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px; }
+  @media screen and (min-width: 768px) {
+    .pri-container {
+      padding: 0 7.5%; } }
+
+.pri-jobun {
+  margin: 32px 0; }
+
+.pri-sigh {
+  float: right;
+  margin: 64px 0; }
+
+.navigation {
+  padding: 0 7.5%; }
+  .navigation div a {
+    text-decoration: none;
+    color: #424242;
+    font-size: 1.5em; }
+
 .body {
   margin: 0; }
 
